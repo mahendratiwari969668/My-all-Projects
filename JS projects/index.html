@@ -1,0 +1,57 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Project Hub</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>My Project Hub</h1>
+            <button id="addBtn">+ Add Project</button>
+        </header>
+
+        <p class="subtitle">All your live projects in one place.</p>
+
+        <input type="text" id="searchInput" placeholder="Search projects...">
+
+        <div id="projectList" class="project-list"></div>
+
+        <p id="emptyMessage">No projects added yet.</p>
+    </div>
+
+    <!-- Add Project Form -->
+    <div class="modal" id="projectModal">
+        <div class="modal-content">
+            <h2>Add New Project</h2>
+
+            <form id="projectForm">
+                <input
+                    type="text"
+                    id="projectName"
+                    placeholder="Project Name"
+                    required
+                >
+
+                <input
+                    type="url"
+                    id="projectLink"
+                    placeholder="https://your-project.vercel.app"
+                    required
+                >
+
+                <div class="buttons">
+                    <button type="button" id="cancelBtn">Cancel</button>
+                    <button type="submit">Save Project</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
